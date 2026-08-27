@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GeoServer Workshops - FOSS4G 2026</title>
+  <style>
+    :root {
+      --navy: #2a2d33;
+      --teal: #d7000f;
+      --teal-dark: #a3000b;
+      --green: #5cb85c;
+      --bg: #ffffff;
+      --panel: #f6f8f9;
+      --text: #2a2d33;
+      --muted: #6b757d;
+      --border: #e3e8ea;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    a { color: var(--teal); }
+
+    header.top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+      padding: 1.2rem 1.8rem;
+      border-bottom: 3px solid var(--teal);
+    }
+    header.top .conf { height: 110px; width: auto; }
+    header.top .gs { height: 84px; width: auto; }
+
+    .hero {
+      background: var(--navy);
+      color: #fff;
+      text-align: center;
+      padding: 3rem 1.5rem;
+    }
+    .hero h1 { margin: 0 0 .5rem; font-size: 2rem; font-weight: 700; }
+    .hero p { margin: 0; opacity: .85; font-size: 1.05rem; }
+
+    main { max-width: 860px; margin: 0 auto; padding: 2.5rem 1.5rem 3rem; }
+
+    .shared {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--green);
+      border-radius: 6px;
+      padding: 1.4rem 1.6rem;
+      margin-bottom: 2.5rem;
+    }
+    .shared h2 { margin: 0 0 .5rem; font-size: 1.15rem; color: var(--navy); }
+    .shared p { margin: 0 0 .8rem; color: var(--muted); font-size: .92rem; }
+    .shared ul { margin: 0 0 1.1rem; padding-left: 1.2rem; color: var(--muted); font-size: .92rem; }
+    .shared li { margin-bottom: .3rem; }
+    .shared code { background: #e7ecee; padding: .1rem .35rem; border-radius: 3px; font-size: .85em; }
+
+    .card {
+      border: 1px solid var(--border);
+      border-top: 4px solid var(--teal);
+      border-radius: 6px;
+      padding: 1.6rem 1.7rem;
+      margin-bottom: 1.5rem;
+    }
+    .card h2 { margin: 0 0 .3rem; font-size: 1.3rem; color: var(--navy); }
+    .card p.desc { margin: 0 0 1.1rem; color: var(--muted); font-size: .95rem; }
+
+    .links { display: flex; flex-wrap: wrap; gap: .7rem; }
+    a.btn {
+      display: inline-block;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: .9rem;
+      padding: .6rem 1.2rem;
+      border-radius: 4px;
+      transition: background .15s, transform .05s;
+    }
+    a.btn:active { transform: translateY(1px); }
+    a.primary { background: var(--teal); color: #fff; }
+    a.primary:hover { background: var(--teal-dark); }
+
+    footer {
+      border-top: 1px solid var(--border);
+      background: var(--panel);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+      padding: 1.6rem 1.8rem;
+      color: var(--muted);
+      font-size: .85rem;
+    }
+  </style>
+</head>
+<body>
+  <header class="top">
+    <img class="conf" src="hiroshima.svg" alt="FOSS4G Hiroshima 2026">
+    <a href="https://www.geosolutionsgroup.com/"><img class="gs" src="geosolutions.png" alt="GeoSolutions"></a>
+  </header>
+
+  <section class="hero">
+    <h1>GeoServer Workshops</h1>
+    <p>FOSS4G Hiroshima 2026 &middot; 30 August &ndash; 5 September 2026</p>
+  </section>
+
+  <main>
+    <div class="shared">
+      <h2>Shared GeoServer package</h2>
+      <p>Preconfigured binary used by both workshops. Download and unzip before you start.</p>
+      <p>Running it requires <strong>Java 17 or newer</strong>. If you don't have it, you have two options:</p>
+      <ul>
+        <li>Install a JDK 17+ from <a href="https://adoptium.net/temurin/releases?version=17&os=any&arch=any">Adoptium</a>.</li>
+        <li>Or follow <code>docker.md</code> inside the zip to run a Java environment as a container.</li>
+      </ul>
+      <div class="links">
+        <a class="btn primary" href="https://github.com/aaime/foss4g-2026/releases/download/artifacts-2026/geoserver-foss4g-2026.zip">Download ZIP</a>
+      </div>
+    </div>
+
+        <section class="card">
+      <h2>OGC APIs, an introduction with GeoServer</h2>
+      <p class="desc">Hands-on tour of the OGC API family (Features, Tiles, Maps and more) served by GeoServer.</p>
+      <div class="links">
+        <a class="btn primary" target="_blank" rel="noopener noreferrer" href="https://docs.geoserver.geo-solutions.it/edu/en/ogcapi/index.html">Training material</a>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Vector tiles with GeoServer</h2>
+      <p class="desc">Producing and styling vector tiles with GeoServer for fast, client-side rendered maps.</p>
+      <div class="links">
+        <a class="btn primary" href="https://github.com/aaime/foss4g-2026/releases/download/artifacts-2026/vector-tiles.pdf">Slides (PDF)</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>Workshops delivered by <a href="https://www.geosolutionsgroup.com/">GeoSolutions</a></span>
+  </footer>
+</body>
+</html>
